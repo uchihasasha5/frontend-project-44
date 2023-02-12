@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type":"module",
+  "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/uchihasasha5/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/uchihasasha5/frontend-project-44#readme"
+  "homepage": "https://github.com/uchihasasha5/frontend-project-44#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
