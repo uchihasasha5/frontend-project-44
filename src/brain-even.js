@@ -8,10 +8,9 @@ const getGamedata = () => {
   console.log(`Question:${num}`);
   const evenodd = readlineSync.question('Your answer:');
   if (evenodd === correctAnswer) {
-    console.log('correct!');
-  } else {
-    console.log('wrong!');
+    return 1;
   }
+  return 0;
 };
 
 export { getGamedata, isEven };
