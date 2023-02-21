@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import { getGamedata } from './brain-even.js';
+import { calcGameData } from './brain-calc.js';
 
 const runGame = () => {
   console.log('Welcome to the Brain games!');
@@ -15,4 +16,16 @@ const runGame = () => {
   }
   if (i === 1 || i === 2) { console.log('you lose!'); } else { console.log(`Congratulations, ${name}, you win!`); }
 };
-export { runGame };
+
+const runGameCalc = () => {
+  console.log('Welcome to the Brain games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hellо, ${name}`);
+  console.log('What is the result of the expression?');
+  let i = 0;
+  for (i = 0; i < 3; i++) {
+    calcGameData();
+  }
+};
+
+export { runGame, runGameCalc };
