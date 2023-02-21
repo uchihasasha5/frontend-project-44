@@ -7,12 +7,12 @@ const runGame = () => {
   console.log(`Hellо, ${name}`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let i = 1;
-  while (i <= 3) {
+  while (i < 3) {
     if (getGamedata() === 1) {
       console.log('correct!');
       i += 1;
     } else { break; }
   }
-  if (i === 1) { console.log('you lose!'); } else { console.log(`Congratulations, ${name}, you win!`); }
+  if (i === 1 || i === 2 || i === 3) { console.log('you lose!'); } else { console.log(`Congratulations, ${name}, you win!`); }
 };
 export { runGame };
