@@ -12,9 +12,9 @@ const runGame = () => {
     if (getGamedata() === 1) {
       console.log('correct!');
       i += 1;
-    } else { break; }
+    } else { return console.log(`Sorry, ${name}, you lose!`); }
   }
-  if (i === 1 || i === 2) { console.log('you lose!'); } else { console.log(`Congratulations, ${name}, you win!`); }
+  console.log(`Congratulations, ${name}, you win!`);
 };
 
 const runGameCalc = () => {
