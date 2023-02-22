@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import { getGamedata } from './brain-even.js';
 import { calcGameData } from './brain-calc.js';
 
+// eslint-disable-next-line consistent-return
 const runGame = () => {
   console.log('Welcome to the Brain games!');
   const name = readlineSync.question('May I have your name? ');
@@ -23,8 +24,8 @@ const runGameCalc = () => {
   console.log(`Hellо, ${name}`);
   console.log('What is the result of the expression?');
   let i = 0;
-  for (i = 0; i < 3; i++) {
-    calcGameData();
+  for (i = 0; i < 3; i += 1) {
+    if (calcGameData() === 'correct!') { i += 1; } else { return console.log('you lose!'); }
   }
 };
 
