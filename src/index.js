@@ -25,8 +25,9 @@ const runGameCalc = () => {
   console.log('What is the result of the expression?');
   let i = 0;
   for (i = 0; i < 3; i += 1) {
-    if (calcGameData() === 'correct!') { i += 1; } else { return console.log('you lose!'); }
+    if (calcGameData() === 'correct!') { console.log('correct!'); } else { console.log('you lose'); break; }
   }
+  if (i === 3) { console.log('Congratulations! You win the game!'); } else (console.log('Maybe you should try again?'));
 };
 
 export { runGame, runGameCalc };
