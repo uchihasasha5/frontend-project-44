@@ -28,7 +28,7 @@ const runGameCalc = () => {
   for (i = 0; i < 3; i += 1) {
     if (calcGameData() === 'correct!') { console.log('correct!'); } else { console.log('you lose'); break; }
   }
-  if (i === 3) { console.log('Congratulations! You win the game!'); } else (console.log('Maybe you should try again?'));
+  if (i === 3) { console.log(`Congratulations, ${name}! You win the game!`); } else (console.log('Maybe you should try again?'));
 };
 
 const runGcdGame = () => {
@@ -38,9 +38,9 @@ const runGcdGame = () => {
   console.log('Find the greatest common divisor of given numbers.');
   let i = 0;
   for (i = 0; i < 3; i += 1) {
-    if (getGcdGameData() === 'correct!') { console.log('correct!'); } else { console.log('wrong!'); break; }
+    if (getGcdGameData() === 'correct!') { console.log('correct!'); } else { break; }
   }
-  if (i === 3) { console.log('Congratulations! You win the game!'); } else (console.log('Maybe you should try again? '));
+  if (i === 3) { console.log(`Congratulations, ${name}! You win the game!`); } else (console.log(`Maybe you should try again, ${name}?`));
 };
 
 export { runGame, runGameCalc, runGcdGame };

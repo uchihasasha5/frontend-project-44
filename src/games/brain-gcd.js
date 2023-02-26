@@ -25,6 +25,6 @@ export const getGcdGameData = () => {
   if (result === playerNumber) {
     return 'correct!';
   }
-  console.log(`correct answer ${result}`);
+  console.log(`Wrong! Correct answer ${result}`);
   return 'wrong!';
 };
