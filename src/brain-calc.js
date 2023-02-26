@@ -15,6 +15,8 @@ export const calcGameData = () => {
   console.log(`Question:${regularExpressions}?`);
   const playerAnswer = readlineSync.question('Your answer:');
   const playerNumber = Number(playerAnswer);
+  // данная константа преобразует ответ пользователя в число //
   if (playerNumber === correctAnswer) { return 'correct!'; }
+  console.log(`correct answer ${correctAnswer}`);
   return 'wrong!';
 };

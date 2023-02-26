@@ -10,6 +10,7 @@ const getGamedata = () => {
   if (evenodd === correctAnswer) {
     return 1;
   }
+  console.log(`correct answer - ${correctAnswer}`);
   return 0;
 };
 
