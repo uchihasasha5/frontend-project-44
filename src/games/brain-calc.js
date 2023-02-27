@@ -16,7 +16,7 @@ export const calcGameData = () => {
   const playerAnswer = readlineSync.question('Your answer:');
   const playerNumber = Number(playerAnswer);
   // данная константа преобразует ответ пользователя в число //
-  if (playerNumber === correctAnswer) { return 'correct!'; }
-  console.log(`correct answer ${correctAnswer}`);
+  if (playerNumber === correctAnswer) { return 'Correct!'; }
+  console.log(`'${playerNumber}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
   return 'wrong!';
 };

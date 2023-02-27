@@ -10,7 +10,7 @@ const getGamedata = () => {
   if (evenodd === correctAnswer) {
     return 1;
   }
-  console.log(`correct answer - ${correctAnswer}`);
+  console.log(`'${evenodd}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
   return 0;
 };
 

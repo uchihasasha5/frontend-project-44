@@ -23,8 +23,8 @@ export const getGcdGameData = () => {
   };
   const result = getGCD(randomNumber1, randomNumber2);
   if (result === playerNumber) {
-    return 'correct!';
+    return 'Correct!';
   }
-  console.log(`Wrong! Correct answer ${result}`);
+  console.log(`'${playerNumber}' is wrong answer ;(. Correct answer '${result}'`);
   return 'wrong!';
 };

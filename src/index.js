@@ -2,45 +2,59 @@ import readlineSync from 'readline-sync';
 import { getGamedata } from './games/brain-even.js';
 import { calcGameData } from './games/brain-calc.js';
 import { getGcdGameData } from './games/brain-gcd.js';
+import { getBrainProgressionData } from './games/brain-progression.js';
 
 // eslint-disable-next-line consistent-return
-const runGame = () => {
+const welcome = () => {
   console.log('Welcome to the Brain games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hellо, ${name}`);
+  return name;
+};
+
+const runGame = () => {
+  const name = welcome();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let i = 1;
   while (i <= 3) {
     if (getGamedata() === 1) {
-      console.log('correct!');
+      console.log('Correct!');
       i += 1;
-    } else { return console.log(`Sorry, ${name}, you lose!`); }
+    } else { console.log(`let's try again, ${name}!`); return; }
   }
-  console.log(`Congratulations, ${name}, you win!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 const runGameCalc = () => {
-  console.log('Welcome to the Brain games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hellо, ${name}`);
+  const name = welcome();
   console.log('What is the result of the expression?');
   let i = 0;
   for (i = 0; i < 3; i += 1) {
-    if (calcGameData() === 'correct!') { console.log('correct!'); } else { console.log('you lose'); break; }
+    if (calcGameData() === 'Correct!') { console.log('Correct!'); } else { break; }
   }
-  if (i === 3) { console.log(`Congratulations, ${name}! You win the game!`); } else (console.log('Maybe you should try again?'));
+  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`let's try again, ${name}!`));
 };
 
 const runGcdGame = () => {
-  console.log('Welcome to the Brain games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hellо, ${name}`);
+  const name = welcome();
   console.log('Find the greatest common divisor of given numbers.');
   let i = 0;
   for (i = 0; i < 3; i += 1) {
-    if (getGcdGameData() === 'correct!') { console.log('correct!'); } else { break; }
+    if (getGcdGameData() === 'Correct!') { console.log('Correct!'); } else { break; }
   }
-  if (i === 3) { console.log(`Congratulations, ${name}! You win the game!`); } else (console.log(`Maybe you should try again, ${name}?`));
+  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`let's try again, ${name}!`));
 };
 
-export { runGame, runGameCalc, runGcdGame };
+const runBrainProgression = () => {
+  const name = welcome();
+  console.log('What number is missing in the progression?');
+  let i = 0;
+  for (i = 0; i < 3; i += 1) {
+    if (getBrainProgressionData() === 'Correct!') { console.log('Correct!'); } else { break; }
+  }
+  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`let's try again, ${name}!`));
+};
+
+export {
+  runGame, runGameCalc, runGcdGame, runBrainProgression,
+};
