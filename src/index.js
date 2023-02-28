@@ -8,7 +8,7 @@ import { getPrimeData } from './games/brain-prime.js';
 const welcome = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?');
-  console.log(`Hellо, ${name}\n`);
+  console.log(`\nHellо, ${name}`);
   return name;
 };
 
