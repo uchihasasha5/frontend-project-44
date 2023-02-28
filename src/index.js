@@ -7,15 +7,13 @@ import { getPrimeData } from './games/brain-prime.js';
 
 const welcome = () => {
   console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hellо, ${name}`);
+  const name = readlineSync.question('May I have your name?');
+  console.log(`Hellо, ${name}\n`);
   return name;
 };
 
 const runGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hellо, ${name}`);
+  const name = welcome();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let i = 1;
   while (i <= 3) {
