@@ -4,13 +4,7 @@ import { calcGameData } from './games/brain-calc.js';
 import { getGcdGameData } from './games/brain-gcd.js';
 import { getBrainProgressionData } from './games/brain-progression.js';
 import { getPrimeData } from './games/brain-prime.js';
-
-const welcome = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name?');
-  console.log(`\nHellо, ${name}`);
-  return name;
-};
+import { welcome } from './cli.js';
 
 const runGame = () => {
   const name = welcome();
