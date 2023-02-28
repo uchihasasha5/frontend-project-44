@@ -12,7 +12,7 @@ export const calcGameData = () => {
   if (operations === '-') { correctAnswer = num1 - num2; }
   if (operations === '+') { correctAnswer = num1 + num2; }
   if (operations === '*') { correctAnswer = num1 * num2; }
-  console.log(`Question:${regularExpressions}?`);
+  console.log(`Question: ${regularExpressions}?`);
   const playerAnswer = readlineSync.question('Your answer:');
   const playerNumber = Number(playerAnswer);
   // данная константа преобразует ответ пользователя в число //
