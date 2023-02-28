@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { getGamedata } from './games/brain-even.js';
 import { calcGameData } from './games/brain-calc.js';
 import { getGcdGameData } from './games/brain-gcd.js';
