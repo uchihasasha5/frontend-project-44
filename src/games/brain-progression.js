@@ -16,7 +16,6 @@ export const getBrainProgressionData = () => {
     resultmass[randomNumber2] = '..';
     i -= 10;
   }
-  console.log(correctAnswer);
   const correctAnswer1 = Number(correctAnswer);
   console.log(`Question: ${resultmass.join(' ')}`);
   const playerAnswer = Number(readlineSync.question('Your answer:'));

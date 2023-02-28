@@ -20,7 +20,7 @@ const runGame = () => {
     if (getGamedata() === 1) {
       console.log('Correct!');
       i += 1;
-    } else { console.log(`let's try again, ${name}!`); return; }
+    } else { console.log(`Let's try again, ${name}!`); return; }
   }
   console.log(`Congratulations, ${name}!`);
 };
@@ -32,7 +32,7 @@ const runGameCalc = () => {
   for (i = 0; i < 3; i += 1) {
     if (calcGameData() === 'Correct!') { console.log('Correct!'); } else { break; }
   }
-  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`let's try again, ${name}!`));
+  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`Let's try again, ${name}!`));
 };
 
 const runGcdGame = () => {
@@ -42,7 +42,7 @@ const runGcdGame = () => {
   for (i = 0; i < 3; i += 1) {
     if (getGcdGameData() === 'Correct!') { console.log('Correct!'); } else { break; }
   }
-  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`let's try again, ${name}!`));
+  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`Let's try again, ${name}!`));
 };
 
 const runBrainProgression = () => {
@@ -52,7 +52,7 @@ const runBrainProgression = () => {
   for (i = 0; i < 3; i += 1) {
     if (getBrainProgressionData() === 'Correct!') { console.log('Correct!'); } else { break; }
   }
-  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`let's try again, ${name}!`));
+  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`Let's try again, ${name}!`));
 };
 
 export const runBrainPrime = () => {
@@ -62,7 +62,7 @@ export const runBrainPrime = () => {
   for (i = 0; i < 3; i += 1) {
     if (getPrimeData() === 'Correct') { console.log('Correct!'); } else { break; }
   }
-  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`let's try again, ${name}!`));
+  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`Let's try again, ${name}!`));
 };
 
 export {
