@@ -13,7 +13,9 @@ const welcome = () => {
 };
 
 const runGame = () => {
-  const name = welcome();
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hellо, ${name}`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let i = 1;
   while (i <= 3) {
