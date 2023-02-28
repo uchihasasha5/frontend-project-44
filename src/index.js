@@ -58,10 +58,9 @@ const runBrainProgression = () => {
 export const runBrainPrime = () => {
   const name = welcome();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  let j;
   let i;
   for (i = 0; i < 3; i += 1) {
-    if (getPrimeData() === 'Correct') { console.log('Correct!'); } else { console.log('Wrong'); break; }
+    if (getPrimeData() === 'Correct') { console.log('Correct!'); } else { break; }
   }
   if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`let's try again, ${name}!`));
 };
