@@ -4,7 +4,7 @@ import readlineSync from 'readline-sync';
 export const getGcdGameData = () => {
   const randomNumber1 = Math.ceil(Math.random() * 100);
   const randomNumber2 = Math.ceil(Math.random() * 100);
-  console.log(`Question:${randomNumber1} ${randomNumber2}`);
+  console.log(`Question: ${randomNumber1} ${randomNumber2}`);
   const playerAnswer = readlineSync.question('Your answer:');
   const playerNumber = Number(playerAnswer);
   const getGCD = (a, b) => {

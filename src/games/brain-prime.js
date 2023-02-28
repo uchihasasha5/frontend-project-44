@@ -10,6 +10,7 @@ const isPrime = (randomNumber) => {
   return randomNumber > 1;
 };
 
+// eslint-disable-next-line consistent-return
 export const getPrimeData = () => {
   const randomNumber = Number(Math.ceil(Math.random() * 100));
   console.log(`Question: ${randomNumber}`);
