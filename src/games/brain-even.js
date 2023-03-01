@@ -14,4 +14,4 @@ const getGamedata = () => {
   return 0;
 };
 
-export { getGamedata, isEven };
+export default getGamedata;

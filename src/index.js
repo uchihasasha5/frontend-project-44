@@ -1,9 +1,9 @@
-import { getGamedata } from './games/brain-even.js';
-import { calcGameData } from './games/brain-calc.js';
-import { getGcdGameData } from './games/brain-gcd.js';
-import { getBrainProgressionData } from './games/brain-progression.js';
-import { getPrimeData } from './games/brain-prime.js';
-import { welcome } from './cli.js';
+import getGamedata from './games/brain-even.js';
+import calcGameData from './games/brain-calc.js';
+import getGcdGameData from './games/brain-gcd.js';
+import getBrainProgressionData from './games/brain-progression.js';
+import getPrimeData from './games/brain-prime.js';
+import welcome from './cli.js';
 
 const runGame = () => {
   const name = welcome();

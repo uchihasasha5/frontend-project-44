@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const calcGameData = () => {
+const calcGameData = () => {
   const massoperations = ['.', '-', '+', '*'];
   const num1 = Math.ceil(Math.random() * 100);
   const num2 = Math.ceil(Math.random() * 100);
@@ -20,3 +20,5 @@ export const calcGameData = () => {
   console.log(`'${playerNumber}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
   return 'wrong!';
 };
+
+export default calcGameData;

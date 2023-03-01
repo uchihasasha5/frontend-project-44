@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import readlineSync from 'readline-sync';
 
-export const getGcdGameData = () => {
+const getGcdGameData = () => {
   const randomNumber1 = Math.ceil(Math.random() * 100);
   const randomNumber2 = Math.ceil(Math.random() * 100);
   console.log(`Question: ${randomNumber1} ${randomNumber2}`);
@@ -28,3 +28,5 @@ export const getGcdGameData = () => {
   console.log(`'${playerNumber}' is wrong answer ;(. Correct answer '${result}'`);
   return 'wrong!';
 };
+
+export default getGcdGameData;

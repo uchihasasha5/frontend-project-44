@@ -11,10 +11,12 @@ const isPrime = (randomNumber) => {
 };
 
 // eslint-disable-next-line consistent-return
-export const getPrimeData = () => {
+const getPrimeData = () => {
   const randomNumber = Number(Math.ceil(Math.random() * 100));
   console.log(`Question: ${randomNumber}`);
   const playerAnswer = readlineSync.question('Your answer:');
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   if (playerAnswer === correctAnswer) { return 'Correct'; } console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer '${correctAnswer}'`);
 };
+
+export default getPrimeData;

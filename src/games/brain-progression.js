@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const getBrainProgressionData = () => {
+const getBrainProgressionData = () => {
   let randomNumber = Number(Math.ceil(Math.random() * 100));
   const randomNumber2 = Number(Math.ceil(Math.random() * 10));
   const resultmass = [];
@@ -23,3 +23,5 @@ export const getBrainProgressionData = () => {
   console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer '${correctAnswer1}'`);
   return 'Wrong!';
 };
+
+export default getBrainProgressionData;

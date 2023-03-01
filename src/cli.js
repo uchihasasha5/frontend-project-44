@@ -7,4 +7,4 @@ const welcome = () => {
   return name;
 };
 
-export { welcome };
+export default welcome;
