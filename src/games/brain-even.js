@@ -2,8 +2,6 @@ import readlineSync from 'readline-sync';
 
 const isEven = (num) => num % 2 === 0;
 
-export const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-
 const getGamedata = () => {
   const num = Math.ceil(Math.random() * 100);
   const correctAnswer = isEven(num) ? 'yes' : 'no';
