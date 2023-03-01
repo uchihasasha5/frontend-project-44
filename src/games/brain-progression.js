@@ -13,13 +13,16 @@ const getBrainProgressionData = () => {
     resultmass.push(randomNumber);
     i += 1;
   }
+  // данный цикл увеличивает следующее число массива на шаг и добавляет его в результирующий масс.//
   while (i !== 0) {
     if (randomNumber2 === 9) { correctAnswer.push(resultmass[9]); resultmass[9] = '..'; i -= 10; break; }
     correctAnswer.push(resultmass[randomNumber2]);
     resultmass[randomNumber2] = '..';
     i -= 10;
   }
+  // данный цикл скрывает случайное число в результирующем массиве //
   const correctAnswer1 = Number(correctAnswer);
+  // функция выше переводит правильный ответ в число //
   console.log(`Question: ${resultmass.join(' ')}`);
   const playerAnswer = Number(readlineSync.question('Your answer:'));
   if (playerAnswer === correctAnswer1) { return 1; }
