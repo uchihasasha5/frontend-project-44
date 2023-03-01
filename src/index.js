@@ -10,9 +10,9 @@ const mainGame = (callback) => {
   const descriptions = () => {
     if (callback === getGamedata) { console.log('Answer "yes" if the number is even, otherwise answer "no".'); }
     if (callback === calcGameData) { console.log('What is the result of the expression?'); }
+    if (callback === getPrimeData) { console.log('Answer "yes" if given number is prime. Otherwise answer "no".'); }
     if (callback === getGcdGameData) { console.log('Find the greatest common divisor of given numbers.'); }
     if (callback === getBrainProgressionData) { console.log('What number is missing in the progression?'); }
-    if (callback === getPrimeData) { console.log('Answer "yes" if given number is prime. Otherwise answer "no".'); }
   };
   descriptions();
   let i;
