@@ -16,9 +16,7 @@ const getGcdGameData = () => {
         a = c;
       }
     }
-    if (a < b) {
-      return getGCD(b, a);
-    }
+    if (a < b) { return getGCD(b, a); }
     return c;
   };
   let result = getGCD(randomNumber1, randomNumber2);
