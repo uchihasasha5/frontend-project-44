@@ -19,7 +19,7 @@ const getBrainProgressionData = () => {
   const correctAnswer1 = Number(correctAnswer);
   console.log(`Question: ${resultmass.join(' ')}`);
   const playerAnswer = Number(readlineSync.question('Your answer:'));
-  if (playerAnswer === correctAnswer1) { return 'Correct!'; }
+  if (playerAnswer === correctAnswer1) { return 1; }
   console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer '${correctAnswer1}'`);
   return 'Wrong!';
 };

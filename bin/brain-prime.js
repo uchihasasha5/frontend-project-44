@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import { runBrainPrime } from '../src/index.js';
+import mainGame from '../src/index.js';
+import getPrimeData from '../src/games/brain-gcd.js';
 
-runBrainPrime();
+mainGame(getPrimeData);

@@ -23,7 +23,7 @@ const getGcdGameData = () => {
   };
   const result = getGCD(randomNumber1, randomNumber2);
   if (result === playerNumber) {
-    return 'Correct!';
+    return 1;
   }
   console.log(`'${playerNumber}' is wrong answer ;(. Correct answer '${result}'`);
   return 'wrong!';

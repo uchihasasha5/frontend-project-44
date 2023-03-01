@@ -16,7 +16,7 @@ const getPrimeData = () => {
   console.log(`Question: ${randomNumber}`);
   const playerAnswer = readlineSync.question('Your answer:');
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
-  if (playerAnswer === correctAnswer) { return 'Correct'; } console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer '${correctAnswer}'`);
+  if (playerAnswer === correctAnswer) { return 1; } console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer '${correctAnswer}'`);
 };
 
 export default getPrimeData;

@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+export const descriptioncalc = 'What is the result of the expression?';
+
 const calcGameData = () => {
   const massoperations = ['.', '-', '+', '*'];
   const num1 = Math.ceil(Math.random() * 100);
@@ -16,7 +18,7 @@ const calcGameData = () => {
   const playerAnswer = readlineSync.question('Your answer:');
   const playerNumber = Number(playerAnswer);
   // данная константа преобразует ответ пользователя в число //
-  if (playerNumber === correctAnswer) { return 'Correct!'; }
+  if (playerNumber === correctAnswer) { return 1; }
   console.log(`'${playerNumber}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
   return 'wrong!';
 };

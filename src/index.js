@@ -5,59 +5,21 @@ import getBrainProgressionData from './games/brain-progression.js';
 import getPrimeData from './games/brain-prime.js';
 import welcome from './cli.js';
 
-const runGame = () => {
+const mainGame = (callback) => {
   const name = welcome();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  let i = 1;
-  while (i <= 3) {
-    if (getGamedata() === 1) {
-      console.log('Correct!');
-      i += 1;
-    } else { console.log(`Let's try again, ${name}!`); return; }
-  }
-  console.log(`Congratulations, ${name}!`);
-};
-
-const runGameCalc = () => {
-  const name = welcome();
-  console.log('What is the result of the expression?');
-  let i = 0;
-  for (i = 0; i < 3; i += 1) {
-    if (calcGameData() === 'Correct!') { console.log('Correct!'); } else { break; }
-  }
-  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`Let's try again, ${name}!`));
-};
-
-const runGcdGame = () => {
-  const name = welcome();
-  console.log('Find the greatest common divisor of given numbers.');
-  let i = 0;
-  for (i = 0; i < 3; i += 1) {
-    if (getGcdGameData() === 'Correct!') { console.log('Correct!'); } else { break; }
-  }
-  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`Let's try again, ${name}!`));
-};
-
-const runBrainProgression = () => {
-  const name = welcome();
-  console.log('What number is missing in the progression?');
-  let i = 0;
-  for (i = 0; i < 3; i += 1) {
-    if (getBrainProgressionData() === 'Correct!') { console.log('Correct!'); } else { break; }
-  }
-  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`Let's try again, ${name}!`));
-};
-
-export const runBrainPrime = () => {
-  const name = welcome();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  const descriptions = () => {
+    if (callback === getGamedata) { console.log('Answer "yes" if the number is even, otherwise answer "no".'); }
+    if (callback === calcGameData) { console.log('What is the result of the expression?'); }
+    if (callback === getGcdGameData) { console.log('Find the greatest common divisor of given numbers.'); }
+    if (callback === getBrainProgressionData) { console.log('What number is missing in the progression?'); }
+    if (callback === getPrimeData) { console.log('Answer "yes" if given number is prime. Otherwise answer "no".'); }
+  };
+  descriptions();
   let i;
   for (i = 0; i < 3; i += 1) {
-    if (getPrimeData() === 'Correct') { console.log('Correct!'); } else { break; }
+    if (callback() === 1) { console.log('Correct!'); } else { console.log(`Let's try again, ${name}!`); return; }
   }
-  if (i === 3) { console.log(`Congratulations, ${name}!`); } else (console.log(`Let's try again, ${name}!`));
+  if (i === 3) { console.log(`Congratulations, ${name}!`); }
 };
 
-export {
-  runGame, runGameCalc, runGcdGame, runBrainProgression,
-};
+export default mainGame;
