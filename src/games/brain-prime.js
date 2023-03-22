@@ -1,5 +1,6 @@
 /* eslint-disable no-plusplus */
 import readlineSync from 'readline-sync';
+import { randomNum } from '../utilits.js';
 
 const isPrime = (randomNumber) => {
   for (let i = 2; i < randomNumber; i++) {
@@ -12,7 +13,7 @@ const isPrime = (randomNumber) => {
 
 // eslint-disable-next-line consistent-return
 const getPrimeData = () => {
-  const randomNumber = Number(Math.ceil(Math.random() * 100));
+  const randomNumber = randomNum(1, 99);
   console.log(`Question: ${randomNumber}`);
   const playerAnswer = readlineSync.question('Your answer:');
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';

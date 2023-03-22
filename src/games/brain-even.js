@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
+import { randomNum } from '../utilits.js';
 
 const isEven = (num) => num % 2 === 0;
 
 const getGamedata = () => {
-  const num = Math.ceil(Math.random() * 100);
+  const num = randomNum(1, 99);
   const correctAnswer = isEven(num) ? 'yes' : 'no';
   console.log(`Question: ${num}`);
   const evenodd = readlineSync.question('Your answer:');

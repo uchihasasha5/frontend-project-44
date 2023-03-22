@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
+import { randomNum } from '../utilits.js';
 
 const getBrainProgressionData = () => {
-  let randomNumber = Number(Math.ceil(Math.random() * 100));
+  let randomNumber = randomNum(1, 99);
   // в функции выше генерируется число для массива //
-  const randomNumber2 = Number(Math.ceil(Math.random() * 10));
+  const randomNumber2 = randomNum(1, 10);
   // в константе выше генерируется шаг на который увеличивается число в массиве //
   const resultmass = [];
   const correctAnswer = [];
