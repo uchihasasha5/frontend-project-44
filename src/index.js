@@ -18,7 +18,7 @@ const mainGame = (callback) => {
   descriptions();
   for (let i = 0; i < 3; i += 1) {
     if (callback() === 1) { console.log('Correct!'); } else { console.log(`Let's try again, ${name}!`); return; }
-    if (i === 3) { console.log(`Congratulations, ${name}!`); }
+    if (i >= 2) { console.log(`Congratulations, ${name}!`); }
   }
 };
 
