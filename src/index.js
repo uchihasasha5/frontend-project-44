@@ -7,6 +7,7 @@ import getPrimeData from './games/brain-prime.js';
 
 const mainGame = (callback) => {
   const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}`);
   const descriptions = () => {
     if (callback === getGamedata) { console.log('Answer "yes" if the number is even, otherwise answer "no".'); }
     if (callback === calcGameData) { console.log('What is the result of the expression?'); }
