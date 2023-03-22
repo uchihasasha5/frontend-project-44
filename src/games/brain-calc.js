@@ -3,12 +3,12 @@ import readlineSync from 'readline-sync';
 export const descriptioncalc = 'What is the result of the expression?';
 
 const calcGameData = () => {
-  const massoperations = ['.', '-', '+', '*'];
+  const lowerCamelCase = ['.', '-', '+', '*'];
   const num1 = Math.ceil(Math.random() * 100);
   const num2 = Math.ceil(Math.random() * 100);
-  const randomizeoperetions = Math.ceil(Math.random(massoperations) * 3);
+  const randomizeoperetions = Math.ceil(Math.random(lowerCamelCase) * 3);
   // данная константа выбирает один из трех возможных операторов //
-  const operations = massoperations[randomizeoperetions];
+  const operations = lowerCamelCase[randomizeoperetions];
   const regularExpressions = `${num1} ${operations} ${num2}`;
   let correctAnswer;
   if (operations === '-') { correctAnswer = num1 - num2; }

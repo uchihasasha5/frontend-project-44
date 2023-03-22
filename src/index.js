@@ -1,12 +1,12 @@
+import readlineSync from 'readline-sync';
 import getGamedata from './games/brain-even.js';
 import calcGameData from './games/brain-calc.js';
 import getGcdGameData from './games/brain-gcd.js';
 import getBrainProgressionData from './games/brain-progression.js';
 import getPrimeData from './games/brain-prime.js';
-import welcome from './cli.js';
 
 const mainGame = (callback) => {
-  const name = welcome();
+  const name = readlineSync.question('May I have your name? ');
   const descriptions = () => {
     if (callback === getGamedata) { console.log('Answer "yes" if the number is even, otherwise answer "no".'); }
     if (callback === calcGameData) { console.log('What is the result of the expression?'); }
@@ -15,11 +15,10 @@ const mainGame = (callback) => {
     if (callback === getPrimeData) { console.log('Answer "yes" if given number is prime. Otherwise answer "no".'); }
   };
   descriptions();
-  let i;
-  for (i = 0; i < 3; i += 1) {
+  for (let i = 0; i < 3; i += 1) {
     if (callback() === 1) { console.log('Correct!'); } else { console.log(`Let's try again, ${name}!`); return; }
+    if (i === 3) { console.log(`Congratulations, ${name}!`); }
   }
-  if (i === 3) { console.log(`Congratulations, ${name}!`); }
 };
 
 export default mainGame;
