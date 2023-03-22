@@ -1,6 +1,6 @@
 /* eslint-disable no-plusplus */
 import readlineSync from 'readline-sync';
-import { randomNum } from '../utilits.js';
+import randomNum from '../utilits.js';
 
 const isPrime = (randomNumber) => {
   for (let i = 2; i < randomNumber; i++) {

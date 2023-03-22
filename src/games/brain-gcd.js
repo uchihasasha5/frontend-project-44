@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import readlineSync from 'readline-sync';
-import { randomNum } from '../utilits.js';
+import randomNum from '../utilits.js';
 
 const getGcdGameData = () => {
   const randomNumber1 = randomNum(1, 99);

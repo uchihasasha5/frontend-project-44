@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { randomNum } from '../utilits.js';
+import randomNum from '../utilits.js';
 
 const getBrainProgressionData = () => {
   let randomNumber = randomNum(1, 99);
